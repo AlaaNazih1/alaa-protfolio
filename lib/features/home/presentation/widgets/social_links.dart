@@ -52,7 +52,7 @@ class SocialLinks extends StatelessWidget {
           onTap: () => _openUrl(linkedInUrl),
         ),
         _SocialButton(
-          icon: FontAwesomeIcons.envelope,
+         icon: FontAwesomeIcons.at,
           tooltip: 'Email',
           onTap: () => _openUrl('mailto:$email'),
         ),

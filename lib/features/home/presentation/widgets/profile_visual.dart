@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/constant/app_sizes.dart';
 
@@ -80,45 +79,13 @@ class ProfileVisual extends StatelessWidget {
                   ),
                 ),
 
-                Positioned(
-                  top: visualSize * 0.12,
-                  left: visualSize * 0.01,
-                  child: const _TechIcon(
-                    icon: FontAwesomeIcons.flutter,
-                    color: Color(0xFF54C5F8),
-                    size: 58,
-                  ),
-                ),
+               
 
-                Positioned(
-                  top: visualSize * 0.04,
-                  right: visualSize * 0.06,
-                  child: _TechIcon(
-                    icon: FontAwesomeIcons.github,
-                    color: colors.onSurface,
-                    size: 54,
-                  ),
-                ),
+               
 
-                Positioned(
-                  bottom: visualSize * 0.19,
-                  right: visualSize * 0.01,
-                  child: const _TechIcon(
-                    icon: FontAwesomeIcons.android,
-                    color: Color(0xFF00B4AB),
-                    size: 50,
-                  ),
-                ),
+              
 
-                Positioned(
-                  bottom: visualSize * 0.04,
-                  left: visualSize * 0.09,
-                  child: const _TechIcon(
-                    icon: FontAwesomeIcons.figma,
-                    color: Color(0xFFFFA000),
-                    size: 48,
-                  ),
-                ),
+               
               ],
             ),
           ),
@@ -128,41 +95,3 @@ class ProfileVisual extends StatelessWidget {
   }
 }
 
-class _TechIcon extends StatelessWidget {
-  const _TechIcon({
-    required this.icon,
-    required this.color,
-    required this.size,
-  });
-
-  final FaIconData icon;
-  final Color color;
-  final double size;
-
-  @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final colors = theme.colorScheme;
-
-    return Container(
-      width: size + 22,
-      height: size + 22,
-      decoration: BoxDecoration(
-        color: colors.surface,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: theme.dividerColor),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(
-              alpha: theme.brightness == Brightness.dark ? 0.15 : 0.08,
-            ),
-            blurRadius: 18,
-            offset: const Offset(0, 8),
-          ),
-        ],
-      ),
-      alignment: Alignment.center,
-      child: FaIcon(icon, color: color, size: size * 0.55),
-    );
-  }
-}

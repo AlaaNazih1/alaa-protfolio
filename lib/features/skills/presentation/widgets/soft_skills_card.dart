@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../core/constant/app_sizes.dart';
 
@@ -39,10 +38,10 @@ class SoftSkillsCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                 ),
                 alignment: Alignment.center,
-                child: FaIcon(
-                  FontAwesomeIcons.users,
+                child: Icon(
+                  Icons.groups_rounded,
                   color: colors.secondary,
-                  size: 21,
+                  size: 25,
                 ),
               ),
               const SizedBox(width: 14),
